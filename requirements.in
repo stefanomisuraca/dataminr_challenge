@@ -1,0 +1,7 @@
+django-cors-headers
+django-extensions
+Django
+djangorestframework
+pip-tools
+python-dateutil
+psycopg2

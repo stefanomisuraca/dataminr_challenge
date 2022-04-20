@@ -1,0 +1,6 @@
+version: '3'
+services:
+  api:
+    environment:
+      - DEBUG=True
+      - API_HOST=http://localhost:8000
