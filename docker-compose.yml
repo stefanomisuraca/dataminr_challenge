@@ -1,6 +1,7 @@
 services:
   db:
     image: postgres
+    container_name: db
     environment:
       POSTGRES_PASSWORD: db_pass
       POSTGRES_USER: dataminr
@@ -11,18 +12,14 @@ services:
       - db-data:/var/lib/postgresql/data/
   adminer:
       image: adminer
+      container_name: adminer
       restart: always
       ports:
         - 8080:8080
   api:
+    container_name: api
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
-    environment:
-      - DB_ENGINE=django.db.backends.postgresql
-      - DB_HOSTNAME=db
-      - DB_USER=dataminr
-      - DB_PASSWORD=db_pass
-      - DB_NAME=dataminr
     volumes:
       - .:/app
     ports:
