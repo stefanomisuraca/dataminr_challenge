@@ -1,1 +1,2 @@
-from .test_view import TestView
+from .subscriptions_view import SubscriptionsView
+from .alerts_view import AlertsView
