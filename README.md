@@ -24,6 +24,17 @@
 'docker exec -it api python manage.py shell_plus --command="run_polling(subscription=Subscriptions.objects.get(id=1))"'
 You can choose the id of the subcription you like to monitor
 
+<h2>API schema</h2>
+<p>Subscriptions support GET, POST, PUT and DELETE operations</p>
+<p>the POST payload look like this:</p>
+<p>
+{
+    "address": "anotherEmail@gmail.com",
+    "location": "Rome",
+    "observers": [{"key": "temp", "target": 9, "condition": "below"}]
+}
+</p>
+
 <h2>How to run the tests</h2>
 <p>Use the command 'docker exec -it api python manage.py tests'</p>
 
