@@ -3,6 +3,5 @@ django-extensions
 Django
 djangorestframework
 pip-tools
-python-dateutil
 psycopg2
 requests
