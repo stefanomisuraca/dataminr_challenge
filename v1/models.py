@@ -1,4 +1,3 @@
-from ast import Call
 from datetime import datetime
 from django.db import models
 from typing import Callable
@@ -18,7 +17,7 @@ class Subscriptions(TimeStampMixin):
    
     address = models.EmailField(max_length=254)
     location = models.CharField(max_length=254)
-    observer = models.JSONField(default=list)
+    observers = models.JSONField(default=list)
 
 
 class Alerts(TimeStampMixin):
@@ -27,13 +26,18 @@ class Alerts(TimeStampMixin):
     subscription = models.ForeignKey(Subscriptions, on_delete=models.CASCADE)
     sent_date = models.DateTimeField(null=True)
 
-    def send_alert(self) -> None:
+    def send_alert(self) -> bool:
         logger.info("Alert sent!")
         self.sent_date = datetime.now()
         self.save()
+        return True
+    
+    def condition_not_met(self) -> bool:
+        logger.info("Condition not met yet")
+        return False
 
-    def check_conditions(self, callback: Callable) -> None:
-        return self.send_alert() if callback else logger.info("Condition not met yet")
+    def check_conditions(self, callback: Callable) -> bool:
+        return self.send_alert() if callback else self.condition_not_met()
 
 
 
