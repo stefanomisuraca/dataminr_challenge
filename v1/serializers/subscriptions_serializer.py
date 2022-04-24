@@ -6,7 +6,7 @@ class SubscriptionsSerializer(serializers.ModelSerializer):
     """Serializer for Subscription model."""
     address = serializers.EmailField(max_length=254)
     location = serializers.CharField(max_length=254)
-    observer = serializers.JSONField()
+    observers = serializers.JSONField()
 
     class Meta:
         """Meta class."""

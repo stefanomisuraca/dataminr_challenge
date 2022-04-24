@@ -92,7 +92,7 @@ SHELL_PLUS_PRE_IMPORTS = [
     ('v1.views', ('*')),
     ('v1.serializers', ("*")),
     ('v1.weather_wrapper', ('WeatherWrapper')),
-    ('v1.polling', ('polling_weather'))
+    ('v1.polling', ('*'))
 ]
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -144,7 +144,8 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.BrowsableAPIRenderer',
     ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
 }
 
 # Internationalization

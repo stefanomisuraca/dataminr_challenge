@@ -1,13 +1,13 @@
 from .models import Subscriptions
 
-def above(observer: Subscriptions.observer, api_target: int) -> bool:
-    return observer.get("target") > api_target
+def above(observers: Subscriptions.observers, api_target: int) -> bool:
+    return api_target > observers.get("target")
 
-def below(observer: Subscriptions.observer, api_target: int) -> bool:
-    return observer.get("target") < api_target
+def below(observers: Subscriptions.observers, api_target: int) -> bool:
+    return api_target < observers.get("target")
 
-def equal(observer: Subscriptions.observer, api_target: int) -> bool:
-    return observer.get("target") == api_target
+def equal(observers: Subscriptions.observers, api_target: int) -> bool:
+    return observers.get("target") == api_target
 
 # Extend with more conditional functions
 
