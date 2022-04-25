@@ -42,4 +42,3 @@ You can choose the id of the subcription you like to monitor
 <p>As you can see, there is not automatic system for starting the monitors.</br>
 This is just to keep the challenge simple and give and idea of how it could work.</p>
 <p>Also the views and serializers are very simple and didn't require any customization in order to speed up the process.</p>
-
