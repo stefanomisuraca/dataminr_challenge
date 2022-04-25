@@ -28,13 +28,14 @@ You can choose the id of the subcription you like to monitor
 <p>Subscriptions support GET, POST, PUT and DELETE operations</p>
 <p>the POST payload look like this:</p>
 <p>
+~~~json
 {
     "address": "anotherEmail@gmail.com",
     "location": "Rome",
     "observers": [{"key": "temp", "target": 9, "condition": "below"}]
 }
 </p>
-
+~~~
 <h2>How to run the tests</h2>
 <p>Use the command 'docker exec -it api python manage.py tests'</p>
 
