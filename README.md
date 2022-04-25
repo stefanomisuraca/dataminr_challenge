@@ -5,7 +5,7 @@
 <ul>
     <li>Open a terminal</li>
     <li>Navigate to the main folder</li>
-    <li>use command "docker-compose build"</li>
+    <li>use command ```docker-compose build```</li>
     <li>After the build phase, just "docker-compose up"</li>
 </ul>
 
@@ -21,7 +21,8 @@
 </ul>
 
 (*) The external command is: </br>
-'docker exec -it api python manage.py shell_plus --command="run_polling(subscription=Subscriptions.objects.get(id=1))"'
+
+```docker exec -it api python manage.py shell_plus --command="run_polling(subscription=Subscriptions.objects.get(id=1))"```
 You can choose the id of the subcription you like to monitor
 
 <h2>API schema</h2>
@@ -37,7 +38,8 @@ You can choose the id of the subcription you like to monitor
 ```
 
 <h2>How to run the tests</h2>
-<p>Use the command 'docker exec -it api python manage.py tests'</p>
+
+Use the command ```docker exec -it api python manage.py tests```
 
 <h2>Some considerations</h2>
 <p>As you can see, there is not automatic system for starting the monitors.</br>
