@@ -2,12 +2,12 @@
 <h1>Dataminr Challenge</h1>
 
 <h2>How to setup the app</h2>
-<ul>
-    <li>Open a terminal</li>
-    <li>Navigate to the main folder</li>
-    <li>use command ```docker-compose build```</li>
-    <li>After the build phase, just "docker-compose up"</li>
-</ul>
+
+* Open a terminal
+* Navigate to the main folder
+* use command ```docker-compose build```
+* After the build phase, just ```docker-compose up```
+
 
 <h2>Relevant Info</h2>
 <p>The Api is located at locahost:8000</p>
